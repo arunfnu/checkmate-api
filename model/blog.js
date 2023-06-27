@@ -20,6 +20,7 @@ const blogSchema = new mongoose.Schema(
     title3img: { type: String, require: true },
     title4img: { type: String, require: true },
     title5img: { type: String, require: true },
+    
     readBy: { type: Number, default: 0 },
     keyTakeWays: [{ type: String }],
     // commentId: { type: Schema.Types.ObjectId, ref: "Comment" },
@@ -28,9 +29,11 @@ const blogSchema = new mongoose.Schema(
       type: String,
     },
   },
+
   {
     timestamps: true,
   }
+  
 );
 
 const Blog = mongoose.model("Blog", blogSchema);
